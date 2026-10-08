@@ -18,5 +18,7 @@
 #
 ---
 include:
-  - board: nice_nano_v2
-    shield: masa61
+  - board: xiao_ble//zmk
+    shield: masa68
+  - board: xiao_ble//zmk
+    shield: settings_reset

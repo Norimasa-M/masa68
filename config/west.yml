@@ -1,13 +1,15 @@
+
 manifest:
   remotes:
     - name: zmkfirmware
       url-base: https://github.com/zmkfirmware
-    # Additional modules containing boards/shields/custom code can be listed here as well
-    # See https://docs.zephyrproject.org/3.2.0/develop/west/manifest.html#projects
   projects:
+    # ZMK v0.4 は未リリースのため、Zephyr 4.1 を含む main を SHA で pin する。
+    # v0.4.0 がタグされたら revision: v0.4.0 に差し替えるだけでよい
+    # （Zephyr は v4.1.0+zmk-fixes のまま変わらないので再移行は不要）。
     - name: zmk
       remote: zmkfirmware
-      revision: v0.3
+      revision: 641514a97db345f499dd50b0360e594270f008fe
       import: app/west.yml
   self:
     path: config
