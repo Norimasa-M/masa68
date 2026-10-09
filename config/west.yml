@@ -9,7 +9,7 @@ manifest:
     # （Zephyr は v4.1.0+zmk-fixes のまま変わらないので再移行は不要）。
     - name: zmk
       remote: zmkfirmware
-      revision: 641514a97db345f499dd50b0360e594270f008fe
+      revision: main
       import: app/west.yml
   self:
     path: config
