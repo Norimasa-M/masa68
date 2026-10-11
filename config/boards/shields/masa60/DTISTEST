@@ -1,9 +1,11 @@
 #include <dt-bindings/zmk/matrix_transform.h>
+#include "masa60-layouts.dtsi"
 
 / {
     chosen {
-        zmk,kscan = &kscan0;
-		zmk,matrix_transform = &default_transform;
+        // zmk,kscan = &kscan0;
+		// zmk,matrix_transform = &default_transform;
+        zmk,physical-layout = &physical_layout0;
     };
 
     default_transform: keymap_transform_0 {
@@ -27,8 +29,11 @@
 
     kscan0: kscan_0 {
         compatible = "zmk,kscan-gpio-matrix";
+        wakeup-source;
         label = "KSCAN";
-                diode-direction = "col2row";
+        diode-direction = "col2row";
+                
+                
 
         col-gpios
             = <&xiao_d 0 GPIO_ACTIVE_HIGH>
